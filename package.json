@@ -1,0 +1,43 @@
+{
+  "name": "netflix_login",
+  "version": "1.0.0",
+  "description": "Netflix login ",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^10.3.4",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.39.0"
+  },
+  "devDependencies": {
+    "gulp-cache-bust": "^1.4.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^4.0.3",
+    "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-webp": "^6.0.0",
+    "postcss": "^8.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/said-alrove/netflix-login.git"
+  },
+  "keywords": [
+    "Netflix"
+  ],
+  "author": "@said_alrove",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/said-alrove/netflix-login/issues"
+  },
+  "homepage": "https://github.com/said-alrove/netflix-login#readme"
+}
