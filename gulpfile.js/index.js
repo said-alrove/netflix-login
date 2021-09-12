@@ -1,7 +1,7 @@
 function dev() {
   // TASKS
   const 
-    { watch } = require('gulp'),
+    { watch, src } = require('gulp'),
     { html } = require('./html.js'),
     { css } = require('./styles.js'),
     { images } = require('./images.js');
@@ -15,4 +15,10 @@ function dev() {
   watch('./src/img/*', gulpConfig, images)
 }
 
+const 
+ { series } = require('gulp'),
+ { html } = require('./html.js'),
+ { css } = require('./styles.js'),
+ { images } = require('./images.js');
+exports.build = series(html, css, images);
 exports.default = dev;
