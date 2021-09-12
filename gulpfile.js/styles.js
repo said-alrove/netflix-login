@@ -26,7 +26,7 @@ function css() {
 
   return src('./src/scss/app.scss')
     .pipe(plumber())
-    .pipe(sass(sassConfig))
+    .pipe(sass(sassConfig).on("error", sass.logError))
     .pipe(postcss(postcssPlugins))
     .pipe(purgecss({
       content: ['./src/*.html']
