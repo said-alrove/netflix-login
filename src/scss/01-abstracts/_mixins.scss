@@ -1,0 +1,25 @@
+//********************************* 
+//* MIXINS 
+//*********************************
+@mixin btn
+(
+    $bg-color,
+    $color
+) 
+{
+    display: block;
+    padding-block: 1em;
+    font-size: 1rem;
+    text: 
+    {
+        align: center;
+        decoration: none;
+    }
+    border: 
+    {
+        inline-size: none;
+        border-radius: .5em;
+    }
+    background-color: $bg-color;
+    color: $color;
+}

@@ -1,6 +1,6 @@
 function minify() {
   // PLUGINS
-  const { src, dest, parallel } = require('gulp');
+  const { src, dest } = require('gulp');
   const 
     imagemin = require('gulp-imagemin'),
     imageminMozjpeg = require('imagemin-mozjpeg'),
@@ -13,17 +13,17 @@ function minify() {
     optimizationLevel: 5
   }
 
-  return src('./src/img/*')
+  return src('./src/assets/**/*')
     .pipe(imagemin([
         imageminMozjpeg(jpegConfig),
         imageminOptipng(pngConfig)
     ]))
-    .pipe(dest('./public/img'))
+    .pipe(dest('./public/assets'))
 }
 
 function convertWebp() {
   // PLUGINS
-  const { src, dest, parallel } = require('gulp');
+  const { src, dest } = require('gulp');
   const 
     webp = require('gulp-webp'),
     imageminWebp = require('imagemin-webp');
@@ -32,11 +32,11 @@ function convertWebp() {
     quality: 75
   }
 
-  return src('./src/img/*')
+  return src('./src/assets/img/*.{jpg, png}')
     .pipe(webp([
       imageminWebp(webpConfig)
     ]))
-    .pipe(dest('./public/img/webp'))
+    .pipe(dest('./public/assets/img'))
 }
 
 const { parallel } = require('gulp');

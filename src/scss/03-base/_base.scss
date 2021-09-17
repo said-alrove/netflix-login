@@ -1,0 +1,39 @@
+//********************************* 
+//* BASE 
+//*********************************
+html {
+    font-size: 62.5%;
+    @include less.box();
+}
+
+body { 
+    min-block-size: 100vh;
+    font-size: 1.6rem; 
+    background-color: map.get(abs.$clr, 'black');
+    color: map.get(abs.$grayScale, '100');
+    @include less.query($device: 'tablet', $size: 'sm') {
+        background: {
+            color: unset;
+            image: url('../assets/img/background.jpg');
+            repeat: no-repeat;
+            size: cover;
+            position: center center;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    @include less.box();
+}
+
+//********************************* 
+//* TYPOGRAHPY 
+//*********************************
+a {
+    color: map.get(abs.$grayScale, '100');
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+}

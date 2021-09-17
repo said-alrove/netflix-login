@@ -1,7 +1,7 @@
 function dev() {
   // TASKS
   const 
-    { watch, src } = require('gulp'),
+    { watch } = require('gulp'),
     { html } = require('./html.js'),
     { css } = require('./styles.js'),
     { images } = require('./images.js');
@@ -11,8 +11,8 @@ function dev() {
     ignoreInitial: false
   }
   watch("./src/*.html", gulpConfig, html);
-  watch("./src/scss/*.scss", gulpConfig, css);
-  watch('./src/img/*', gulpConfig, images)
+  watch("./src/scss/**/*.scss", gulpConfig, css);
+  watch('./src/assets/**/*', gulpConfig, images)
 }
 
 const 
