@@ -36,7 +36,7 @@ function convertWebp() {
     .pipe(webp([
       imageminWebp(webpConfig)
     ]))
-    .pipe(dest('./public/assets/img'))
+    .pipe(dest('./public/assets/webp'))
 }
 
 const { parallel } = require('gulp');

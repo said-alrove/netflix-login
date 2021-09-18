@@ -15,4 +15,5 @@ function scripts() {
     .pipe(dest('./public/scripts'))
 }
 
+// This is mandatory
 exports.scripts = scripts;
