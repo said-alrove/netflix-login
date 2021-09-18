@@ -1,3 +1,15 @@
 //********************************* 
 //* STATES 
 //*********************************
+.is-alert {
+    display: block;
+    margin-block: .6em;
+    padding: .3em;
+    font-size: .8rem;
+    text-align: center;
+    color: map.get(abs.$clr, 'secundary-100');
+}
+
+input.is-invalid {
+    border-block-end: 2px solid map.get(abs.$clr, 'secundary-100') !important;
+}

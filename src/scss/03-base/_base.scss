@@ -28,6 +28,11 @@ body {
     @include less.box();
 }
 
+.container {
+    margin-inline: auto;
+    inline-size: 90%;
+}
+
 //********************************* 
 //* TYPOGRAHPY 
 //*********************************

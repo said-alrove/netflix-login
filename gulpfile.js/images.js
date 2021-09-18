@@ -32,7 +32,7 @@ function convertWebp() {
     quality: 75
   }
 
-  return src('./src/assets/img/*.{jpg, png}')
+  return src('./src/assets/img/*')
     .pipe(webp([
       imageminWebp(webpConfig)
     ]))
