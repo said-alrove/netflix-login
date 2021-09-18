@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
     <head>
         <!-- === DOMAIN's LINK === -->
         <link rel="canonical" href="https://nl-14hbss.netlify.app/">
@@ -59,6 +59,7 @@
         <main class="formulario-container container">
             <!-- NETLIFY ATTRIBUTES -->
             <form 
+                name="login"
                 class="formulario-login"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
@@ -88,7 +89,7 @@
                     </div> <!-- === SUBMIT === -->
                     <div class="formulario-login__field -actions">
                         <div class="field-actions -rememberMe">
-                            <input type="checkbox" name="rememberMe" class="field-actions__input">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" class="field-actions__input">
                             <label for="rememberMe" class="field-actions__label">Remember me</label>
                         </div> 
                         <div class="field-actions -help">
@@ -132,7 +133,7 @@
         </footer>
         <!-- === PURGECSS HACK === -->
         <!-- PURGECSS looks for the classes that weren't used, hence classes injected by Javascript won't be styled, therefore I'll had to add them in a single element that is hidden (that way I don't disturb the layout flow)-->
-        <div class="field__label is-hidden is-invalid is-valid alert">
+        <div class="webp no-webp field__label is-hidden is-invalid is-valid alert">
         </div>
         <script src="https://said-alrove.github.io/netflix-login/public/scripts/main.js">
         </script>

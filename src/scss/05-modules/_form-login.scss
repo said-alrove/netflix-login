@@ -40,7 +40,7 @@
         &.-actions {
             @include less.flexbox($jt-content: space-between);
             margin-block-start: .5em;
-            padding-block: .5em 8em;
+            padding-block: .5em 5em;
             &.-rememberMe {
                 @include less.flexbox($al-items: center, $gap: .3em);
             }

@@ -4,6 +4,22 @@
 html {
     font-size: 62.5%;
     @include less.box();
+
+    &.no-webp {
+        body {
+            @include less.query($device: 'tablet', $size: 'sm') {
+                background-image: url('https://said-alrove.github.io/netflix-login/public/assets/img/background.jpg');
+            }
+        }
+    }
+
+    &.webp {
+        body {
+            @include less.query($device: 'tablet', $size: 'sm') {
+                background-image: url('https://said-alrove.github.io/netflix-login/public/assets/webp/background.webp');
+            }
+        }
+    }
 }
 
 body { 
@@ -17,7 +33,6 @@ body {
     @include less.query($device: 'tablet', $size: 'sm') {
         background: {
             color: unset;
-            image: url('../assets/img/background.jpg');
             repeat: no-repeat;
             size: cover;
             position: center center;
