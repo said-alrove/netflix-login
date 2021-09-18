@@ -1,8 +1,22 @@
 //********************************* 
+//* BUILT-IN MODULES 
+//*********************************
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:color';
+@use 'sass:string';
+@use 'sass:selector';
+
+//********************************* 
 //* VARIABLES 
 //*********************************
 @import 'fonts';
 @import 'colors';
+
+$transition: all 200ms ease;
+$radius: .25em;
 
 //********************************* 
 //* MIXINS 

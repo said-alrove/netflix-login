@@ -39,6 +39,11 @@ body {
 //********************************* 
 //* TYPOGRAHPY 
 //*********************************
+fieldset,
+input { border: none; }
+
+input:focus { outline: none; }
+
 a {
     color: map.get(abs.$grayScale, '100');
     text-decoration: none;

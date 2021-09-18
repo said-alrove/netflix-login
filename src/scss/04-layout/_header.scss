@@ -3,11 +3,12 @@
 //*********************************
 .header-site {
     &__logo {
-        margin-block-start: .875em;
-        margin-inline-start: 3%;
+        margin-block-start: 1.4em;
+        margin-inline-start: 5%;
         max-inline-size: 16rem;
         @include less.query($device: 'tablet', $size: 'sm') {
-            margin-block-start: 1em;
+            margin-block-start: 1.6em;
+            margin-inline-start: 3%;
         }
     }
 }

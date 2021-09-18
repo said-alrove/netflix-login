@@ -13,3 +13,5 @@
 input.is-invalid {
     border-block-end: 2px solid map.get(abs.$clr, 'secundary-100') !important;
 }
+
+.is-hidden { display: none; }

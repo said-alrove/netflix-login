@@ -1,0 +1,36 @@
+//********************************* 
+//* FORM-SUBMETHODS
+//*********************************
+.formulario {
+    &-subMethods {
+        padding-block-end: 1em;
+        @include less.query($device: 'tablet', $size: 'sm') {
+            padding-block-end: 0;
+        }
+    }
+}
+
+.subMethods {
+    &__facebook {
+        @include less.flexbox($al-items: center, $gap: .5em);
+
+        > i {
+            color: map.get(abs.$clr, 'lt', 'blue-100');
+            font-size: 1.8rem;
+        }
+
+        > a { font-size: 1.4rem; }
+    }
+
+    &__signUp {
+        @include less.flexbox();
+        margin-block-start: 1em;
+        font-size: 1.6rem;
+
+        > a {
+            margin-inline-start: .5em;
+            font-weight: bold;
+            color: map.get(abs.$clr, 'white');
+        }
+    }
+}

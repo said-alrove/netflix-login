@@ -1,0 +1,108 @@
+//********************************* 
+//* FORM-LOGIN
+//*********************************
+.formulario {
+    &-container {
+        @include less.query($device: 'tablet', $size: 'sm') {
+            background-color: color.change(map.get(abs.$clr, 'black'), $alpha: .85);
+            margin-block: 2em 4em;
+            max-inline-size: 43rem;
+            padding: 3em 3.2em;
+        }
+    }
+
+    &-login {
+        legend {
+            padding-block: .6em;
+            font: {
+                size: 3.2rem;
+                weight: bold;
+            }
+            color: map.get(abs.$clr, 'white');
+        }
+    }
+}
+
+//********************************* 
+//* FIELDS
+//********************************* 
+.formulario-login {
+    &__field {
+        position: relative;
+        @include less.flexbox();
+        margin-block-end: .8em;
+
+        &.-submit {
+            @include less.flexbox();
+            margin-block-start: 1.6em;
+        }
+
+        &.-actions {
+            @include less.flexbox($jt-content: space-between);
+            margin-block-start: .5em;
+            padding-block: .5em 8em;
+            &.-rememberMe {
+                @include less.flexbox($al-items: center, $gap: .3em);
+            }
+        }
+    }
+
+    @at-root {
+        .field-submit {
+            &__input {
+                @include abs.btn
+                (
+                    $bg-color: map.get(abs.$clr, 'primary-100'),
+                    $color: map.get(abs.$clr, 'white')
+                );
+
+                &:hover { cursor: pointer; }
+            }
+        }
+
+        .field-actions__label,
+        .field-actions__link { font-size: 1.4rem; }
+
+        .field__input {
+            flex: 1;
+            padding-block: 1.4em .8em;
+            padding-inline: 1em;
+            border-radius: abs.$radius;
+            background-color: map.get(abs.$grayScale, '300');
+            color: map.get(abs.$clr, 'white');
+
+            &:focus {
+                background-color: map.get(abs.$grayScale, '200');
+
+                + label { 
+                    inset: {
+                        block-start: .8em;
+                        inline-start: 1.4em;
+                    }
+                    font-size: 1rem; 
+                }
+            }
+            
+            &-show {
+                position: absolute;
+                inset: {
+                    block-start: 1.1em;
+                    inline-end: 1em;
+                }
+                text-transform: uppercase;
+
+                &:hover { cursor: pointer; }
+            }
+        }
+
+        .field__label {
+            position: absolute;
+            inset: {
+                block-start: 1.3em;
+                inline-start: 1em;
+            }
+            font-size: 1.4rem;
+            transition: abs.$transition;
+        }
+    }
+}

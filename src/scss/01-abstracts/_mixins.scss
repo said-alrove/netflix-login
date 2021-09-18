@@ -8,8 +8,13 @@
 ) 
 {
     display: block;
+    inline-size: 100%;
     padding-block: 1em;
-    font-size: 1rem;
+    font: 
+    {
+        size: 1.6rem;
+        weight: bold;
+    }
     text: 
     {
         align: center;
@@ -17,9 +22,14 @@
     }
     border: 
     {
-        inline-size: none;
-        border-radius: .5em;
+        width: 0;
+        radius: .25em;
     }
     background-color: $bg-color;
     color: $color;
+    transition: all 200ms ease;
+
+    &:hover {
+        background-color: color.adjust($bg-color, $lightness: -5%);
+    }
 }

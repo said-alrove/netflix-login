@@ -8,7 +8,7 @@
         @include less.query($device: 'tablet', $size: 'sm') {
             padding: 1em 3em;
             border: none;
-            background-color: color.adjust(map.get(abs.$clr, 'black'), $alpha: .85);
+            background-color: color.change(map.get(abs.$clr, 'black'), $alpha: .85);
         }
 
         .container {
@@ -18,7 +18,9 @@
         }
     }
 
-    &-callCenter { margin-block: .25em; }
+    $_margin-block: .25em;
+
+    &-callCenter { margin-block: $_margin-block; }
 
     &-menu {
         &__list {
@@ -29,7 +31,7 @@
         }
 
         &__item {
-            margin-block: .25em; 
+            margin-block: $_margin-block; 
 
             > a {
                 flex: 0 0 auto;
@@ -47,10 +49,10 @@
 
 .language {
     &-list {
-        margin-block-start: .75em;
+        margin-block-start: $_margin-block + .5em;
         padding: 1em 3em;
         border: .1em solid map.get(abs.$grayScale, '300');
-        border-radius: .5em;
+        border-radius: abs.$radius;
         appearance: none;
         background-color: map.get(abs.$clr, 'black');
         color: map.get(abs.$grayScale, '100');
