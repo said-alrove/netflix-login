@@ -104,5 +104,13 @@
             font-size: 1.4rem;
             transition: abs.$transition;
         }
+
+        .field__label.is-valid {
+            inset: {
+                block-start: .8em;
+                inline-start: 1.4em;
+            }
+            font-size: 1rem; 
+        }
     }
 }
