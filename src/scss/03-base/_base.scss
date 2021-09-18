@@ -8,7 +8,10 @@ html {
 
 body { 
     min-block-size: 100vh;
-    font-size: 1.6rem; 
+    font: {
+        family: map.get(abs.$ff, 'main');
+        size: 1.6rem;
+    }
     background-color: map.get(abs.$clr, 'black');
     color: map.get(abs.$grayScale, '100');
     @include less.query($device: 'tablet', $size: 'sm') {
@@ -41,4 +44,9 @@ a {
     text-decoration: none;
 
     &:hover { text-decoration: underline; }
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }

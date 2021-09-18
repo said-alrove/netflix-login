@@ -1,0 +1,59 @@
+//********************************* 
+//* FOOTER
+//*********************************
+.footer {
+    &-site {
+        padding-block: 2em 4em;
+        border-block-start: .1em solid map.get(abs.$grayScale, '300');
+        @include less.query($device: 'tablet', $size: 'sm') {
+            padding: 1em 3em;
+            border: none;
+            background-color: color.adjust(map.get(abs.$clr, 'black'), $alpha: .85);
+        }
+
+        .container {
+            @include less.query($device: 'tablet', $size: 'sm') {
+                max-inline-size: 50%;
+            }
+        }
+    }
+
+    &-callCenter { margin-block: .25em; }
+
+    &-menu {
+        &__list {
+            @include less.flexbox($jt-content: space-between, $wrap: wrap);
+            @include less.query($device: 'desktop', $size: 'sm') {
+                max-inline-size: 90%;
+            }
+        }
+
+        &__item {
+            margin-block: .25em; 
+
+            > a {
+                flex: 0 0 auto;
+                margin-inline-end: 2em;
+                padding-block: .5em;
+                font-size: 1.3rem;
+            }
+        }
+
+        &__item:last-of-type {
+            > a { margin-inline-end: 0; }
+        }
+    }
+}
+
+.language {
+    &-list {
+        margin-block-start: .75em;
+        padding: 1em 3em;
+        border: .1em solid map.get(abs.$grayScale, '300');
+        border-radius: .5em;
+        appearance: none;
+        background-color: map.get(abs.$clr, 'black');
+        color: map.get(abs.$grayScale, '100');
+        font-size: 1.3rem;
+    }
+}
